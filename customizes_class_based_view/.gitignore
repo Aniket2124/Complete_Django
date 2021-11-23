@@ -1,0 +1,14 @@
+/venv/*
+/env/*
+.env
+/customize_class_based_view/__pycache__/*
+/list_view_customize/__pycache__/*
+/list_view_customize/migrations/*
+/list_view_customize/migrations/__pycache__/*
+
+
+
+
+#ignoring Database
+db.sqlite3
+

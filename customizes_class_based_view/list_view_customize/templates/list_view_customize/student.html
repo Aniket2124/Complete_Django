@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list view customize</title>
+</head>
+<body>
+    <h1>Student details</h1>
+    {% for stu in students %}
+    {{ stu.name }}
+    {{ stu.email }}
+    {{ stu.roll }}
+    {{ stu.course }}<br>
+   {% endfor %}
+    
+
+   <h6>Student details</h6>
+    {% for stu in fresher %}
+    {{ stu.name }}
+    {{ stu.email }}
+    {{ stu.roll }}
+    {{ stu.course }}<br>
+   {% endfor %}
+</body>
+</html>
