@@ -2,4 +2,13 @@
 /env/*
 .env
 /class_based_view/__pycache__/*
+/list_view/__pycache__/*
+/list_view/migrations/*
+/list_view/migrations/__pycache__/*
+
+
+
+
+#ignoring Database
+db.sqlite3
 
