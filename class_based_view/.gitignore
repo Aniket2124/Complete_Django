@@ -1,0 +1,5 @@
+/venv/*
+/env/*
+.env
+/class_based_view/__pycache__/*
+
