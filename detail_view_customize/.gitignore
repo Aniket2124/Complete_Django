@@ -1,0 +1,8 @@
+/venv/*
+/env/*
+.env
+db.sqlite3
+/detail_view_customize/__pycache__/*
+/school/__pycache__/*
+/school/migrations/*
+/school/migrations/__pycache__/*
