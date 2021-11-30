@@ -13,6 +13,10 @@ class StudentCreateView(CreateView):
     # success_url = '/thanks/'
 
 
+    # customizing own Template Name
+    template_name = 'school/sform.html'
+
+
     # Or u can use method get_absolute_url in models.py
 
 class StudentTemplateView(TemplateView):
