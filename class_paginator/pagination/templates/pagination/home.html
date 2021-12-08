@@ -7,6 +7,7 @@
     <title>Home page</title>
 </head>
 <body>
+    {% if is_paginated %}
    {% for post in page_obj %}
    <h1>{{post.title}}</h1>
    <p>{{post.desc}}</p>
@@ -14,6 +15,7 @@
    {% endfor %}
    <div>
        <span>
+           
            {% if page_obj.has_previous %}
            <a href="?page={{page_obj.previous_page_number}}">Previous</a>
            {% endif %}
@@ -25,5 +27,13 @@
            {% endif %}
        </span>
    </div>
+   {% else %}
+        {% for post in object_list %}
+        <h1>{{post.title}}</h1>
+        <p>{{post.desc}}</p>
+        <small>{{post.publish_date}}</small>
+        {% endfor %}
+
+   {% endif %}
 </body>
 </html>
