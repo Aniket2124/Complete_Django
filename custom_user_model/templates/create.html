@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} New User {% endblock %}
+
+{% block body %}
+<a type="button" href="{% url 'home' %}">Home</a>
+<h2>New User</h2>
+<div>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label>Email</label>
+        <input type="email" name="email" id="">
+        <label>Name</label>
+        <input type="text" name="name" id="">
+        <label>Password</label>
+        <input type="password" name="password" id="">
+        <label>Blog title</label>
+        <input type="text" name="blog_title" id="">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+{% block body %}
+
+<h1>Current Users: {{ all_user|length }}</h1>
+<a type="button" href="{% url 'create' %}">New User</a><hr>
+
+{% for user in all_user %}
+
+<h4>Name: {{ user.username }}</h4>
+<h4>Email: {{ user.email }}</h4>
+<h4>Joined On: {{ user.joined_date }}</h4>
+<h4>Blog Title: {{ user.blogpost.title }}</h4><hr>
+{% endfor %}
+
+
+{% endblock %}
