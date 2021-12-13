@@ -1,0 +1,29 @@
+
+<div class="form-group">
+    <label for="email">Email</label>
+    
+    <div class="invalid-feedback">
+      Please fill in your email
+    </div>
+  <div class="text-danger">{{form.errors.username}}</div>
+  </div>
+  <div class="form-group">
+    <div class="d-block">
+      <label for="password" class="control-label">Password</label>
+      <div class="float-right">
+        
+          Forgot Password?
+        </a>
+      </div>
+    </div>
+   
+    <div class="invalid-feedback">
+      please fill in your password
+    </div>
+    <div class="text-danger">{{form.errors.password}}</div>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+      Login
+    </button>

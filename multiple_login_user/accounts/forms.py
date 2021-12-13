@@ -16,7 +16,7 @@ class UserAdminCreationForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('email', 'is_omadmin')
+        fields = ('email', 'is_student')
 
     def clean_password2(self): # checking that the two passwords match
         password1 = self.cleaned_data.get('password1')
@@ -43,7 +43,7 @@ class UserAdminChangeForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('email', 'password', 'is_active', 'admin')
+        fields = ('email', 'password', 'is_active', 'is_admin')
 
     def clean_password(self):
         ''' Regardless of what the user provides retrun the initial value.
