@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="form-group">
     <label for="email">Email</label>
     
@@ -26,4 +26,20 @@
   <div class="form-group">
     <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
       Login
-    </button>
+    </button> -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login</title>
+    </head>
+    <body>
+      <form action=""method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Login">
+      </form>
+    </body>
+    </html>

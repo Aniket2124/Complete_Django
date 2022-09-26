@@ -1,57 +1,18 @@
-<form method="post">
-    {% csrf_token %}
-    <div class="row">
-      <div class="form-group col-6">
-        <label for="name">Name</label>
-        {% render_field form.name class+="form-control" %}
-        <div id="error-name" class="text-danger">
-            {{form.errors.name}}
-        </div>
-      </div>
-      <div class="form-group col-6">
-        <label for="id_email">Email</label>
-        {% render_field form.email class+="form-control" %}
-        <div id="error-email" class="text-danger">
-            {{form.errors.email}}
-        </div>
-      </div>
-      <div class="form-group col-12">
-        <label for="phone_number">Phone</label>
-        {% render_field form.phone_number class+="form-control" %}
-        <div id="error-phone" class="text-danger">
-            {{form.errors.phone_number }}
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="form-group col-6">
-        <label for="id_password1" class="d-block">Password</label>
-        {% render_field form.password1 class+="form-control pwstrength" data-indicator="pwindicator" %}
-        <div id="pwindicator" class="pwindicator">
-          <div class="bar"></div>
-          <div class="label"></div>
-        </div>
-        <div id="error-password1" class="text-danger">
-            {{form.errors.password1}}
-        </div>
-      </div>
-      <div class="form-group col-6">
-        <label for="id_password2" class="d-block">Password Confirmation</label>
-        {% render_field form.password2 class+="form-control" %}
-        <div id="error-password2" class="text-danger">
-            {{form.errors.password2}}
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="custom-control custom-checkbox">
-        <input type="checkbox" name="agree" class="custom-control-input" id="agree" required>
-        <label class="custom-control-label" for="agree">I agree with the terms and conditions</label>
-      </div>
-    </div>
-    <div class="form-group">
-      <button type="submit" class="btn btn-primary btn-lg btn-block">
-        Register
-      </button>
-    </div>
-  </form>
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+  </head>
+  <body>
+    <form action=""method='POST'>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit">
+    </form>
+    
+  </body>
+  </html>
